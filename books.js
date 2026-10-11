@@ -3,7 +3,7 @@
   async function renderBooks(filter) {
    const booksWrapper = document.querySelector(".books");
 
-    booksWrapper.classList += ' book__loading'
+    booksWrapper.classList.add('books__loading');
 
           if (!books) {
             books = await getBooks();
@@ -16,7 +16,7 @@
      }
 
      else if (filter === 'HIGH TO LOW') {
-      books.sort((a, b) => (b.salePrice || b.originalPrice) - (a.salePrice || b.originalPrice ));
+      books.sort((a, b) => (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice ));
      }
 
       else if (filter === 'RATING') {
@@ -88,9 +88,9 @@
           {
             id: 1,
             title: "Crack the Coding Interview",
-            url: "assets/crack the coding interview",
+            url: "assets/crack the coding interview.png",
             originalPrice: 49.95,
-            salesPrice: 14.95,
+            salePrice: 14.95,
             rating: 4.5,
           },
           {
@@ -98,7 +98,7 @@
             title: "Atomic Habits",
             url: "assets/atomic habits.jpg",
             originalPrice: 39,
-            salesPrice: null,
+            salePrice: null,
             rating: 5,
           },
           {
@@ -106,7 +106,7 @@
             title: "Deep Work",
             url: "assets/deep work.jpeg",
             originalPrice: 29,
-            salesPrice: 12,
+            salePrice: 12,
             rating: 5,
           },
           {
@@ -114,7 +114,7 @@
             title: "The 10X Rule",
             url: "assets/book-1.jpeg",
             originalPrice: 44,
-            salesPrice: 19,
+            salePrice: 19,
             rating: 4.5,
           },
           {
@@ -122,7 +122,7 @@
             title: "Be Obsessed Or Be Average",
             url: "assets/book-2.jpeg",
             originalPrice: 32,
-            salesPrice: 17,
+            salePrice: 17,
             rating: 4,
           },
           {
@@ -130,7 +130,7 @@
             title: "Rich Dad Poor Dad",
             url: "assets/book-3.jpeg",
             originalPrice: 70,
-            salesPrice: 12.5,
+            salePrice: 12.5,
             rating: 5,
           },
           {
@@ -138,7 +138,7 @@
             title: "Cashflow Quadrant",
             url: "assets/book-4.jpeg",
             originalPrice: 11,
-            salesPrice: 10,
+            salePrice: 10,
             rating: 4,
           },
           {
@@ -146,7 +146,7 @@
             title: "48 Laws Of Power",
             url: "assets/book-5.jpeg",
             originalPrice: 38,
-            salesPrice: 17.95,
+            salePrice: 17.95,
             rating: 4.5,
           },
           {
@@ -154,7 +154,7 @@
             title: "The 5 Second Rule",
             url: "assets/book-6.jpeg",
             originalPrice: 35,
-            salesPrice: null,
+            salePrice: null,
             rating: 2,
           },
           {
@@ -162,7 +162,7 @@
             title: "Your Next Five Moves",
             url: "assets/book-7.jpg",
             originalPrice: 40,
-            salesPrice: null,
+            salePrice: null,
             rating: 4,
           },
           {
@@ -170,7 +170,7 @@
             title: "Mastery",
             url: "assets/book-8.jpeg",
             originalPrice: 30,
-            salesPrice: null,
+            salePrice: null,
             rating: 4.5,
           },
         ]);
