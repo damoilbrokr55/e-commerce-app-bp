@@ -3,12 +3,12 @@
   async function renderBooks(filter) {
    const booksWrapper = document.querySelector(".books");
 
-    booksWrapper.classlist += ' book__loading'
+    booksWrapper.classList += ' book__loading'
 
           if (!books) {
             books = await getBooks();
           }
-     booksWrapper.classlist.remove('books__loading');
+     booksWrapper.classList.remove('books__loading');
     
         
           if (filter === 'LOW TO HIGH') {
@@ -82,7 +82,7 @@
     });
     // FAKE DATA
   function getBooks() {
-    return new promise((resolve) => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve([
           {
@@ -175,7 +175,8 @@
           },
         ]);
     }, 1000);
-  }
+  });
+}
 
 
 
